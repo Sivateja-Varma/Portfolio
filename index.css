@@ -1,211 +1,48 @@
-body{
-  background-image: url('dotgrid.jpg');
-  padding-bottom: 2000px;
-}
-.contain{
-  margin-top: 20%;
-  margin-left: 20%;
+#box{
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  justify-content:center;
   align-items: center;
-  justify-content: center;
-  width:65%;
-  height:200px;
-  border:none;
-  border-radius:10px;
-  background-color: rgba(0,0,0,0.5);
-  opacity:0.8;
-}
-.contain>.inside{
-  width:100%;
-  border:none;
-  font-size:45px;
-  height:100px;
-  color: whitesmoke;
-  font-weight: 700;
-  background-color:transparent ;
-
-}
-#first::first-letter{
-  font-size:65px ;
-}
-#first{
-   text-align: center;
-}
-#try{
-  color:whitesmoke;
-  text-align: center;
-  width:100%;
-  font-size:20px;
-  height:100px;
-  background-color:transparent ;
-}
-.section-1{
-  margin-top:350px;
-  opacity: 1;
+  font-size: 20px;
+  background-color: rgb(82, 157, 237);
   color:white;
-  font-size: 70px;
-  text-align: center;
-  animation: slide-up both; 
-  animation-timeline: view();
-  animation-range: entry 50% cover 100vh;
+  border-top: 3px solid rgb(0, 123, 255);
+  border-right: 3px solid rgb(0, 123, 255); 
+  height:60px;
+  transition: background-color 0.25s,color 0.25s ,border-top 0.25s, border-right 0.25s;
 }
-.content-box{
-  gap: 30px;
-  margin-top: 100px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 200px;
+#box:hover{
+  background-color: whitesmoke !important;
+  color:rgb(4, 44, 87) !important;
+  border-top: 3px solid rgb(4, 44, 87) !important;
+  border-right: 3px solid rgb(4, 44, 87) !important; 
+  cursor: pointer !important;
 }
-.project1{
-  opacity: 1;
-  width:600px;
+#about .card{
   height:300px;
-  border: 1px solid white;
-  border-radius: 10px;
-  box-sizing:content-box;
-  overflow: hidden;
-  animation: fadeup both;
-  animation-timeline:view() ;
-  animation-range:entry 20% cover 40%;
 }
-.link1{
-  text-align: center;
-  align-content: center;
-  width:100%;
+#about .card .card-header{
+  display: flex;
+  align-items: center;
   height:100px;
-  background-color: rgb(59, 123, 226);
-}
-.link1 a{
+  background-color:rgb(82, 157, 237);
   color:white;
-  font-size: 2em;
-  text-decoration: none;
+  font-weight: 800;
 }
-.project1 .description1{
-  width:100%;
-  height:200px;
-  color:rgb(59, 123, 226);
-  font-size: 1.2em;
-  background-color: white;
+#about .card .card-header:hover{
+  background-color:rgb(4, 44, 87) !important;
+  color:white;
+  transition:background-color 0.25s,color 0.25s
 }
-.description1 ul{
-  text-align: left;
-  margin:0;
-  font-size: 1em;
-  background-color: white;
-  padding: 10px 0;
+#about .card .card-body{
+  color:rgb(82, 157, 237);
+  font-size: 18px;
+  transition:background-color 0.25s,color 0.25s;
 }
-.description1 li{
-  padding-top: 5px;
-  font-size: 0.95em;
-  background-color: white;
-
+#about .card .card-body:hover{
+  background-color:rgb(82, 157, 237); 
+  color:white;
 }
-.project2{
-  opacity: 1;
-  width:600px;
-  height:300px;
-  border: 1px solid white;
-  border-radius: 10px;
-  box-sizing:content-box;
-  overflow: hidden;
-  animation: fadeup both;
-  animation-timeline:view() ;
-  animation-range:entry 40% cover 60%;
-}
-.project2 .description1{
-  width:100%;
-  height:200px;
-  color:rgb(59, 123, 226);
-  font-size: 1.2em;
-  background-color: white;
-}
-.project3{
-  opacity: 1;
-  width:600px;
-  height:300px;
-  border: 1px solid white;
-  border-radius: 10px;
-  box-sizing:content-box;
-  overflow: hidden;
-  animation: fadeup both;
-  animation-timeline:view() ;
-  animation-range:entry 60% cover 80%;
-}
-.project3 .description1{
-  width:100%;
-  height:200px;
-  color:rgb(59, 123, 226);
-  font-size: 1.2em;
-  background-color: white;
-}
-
-@keyframes slide-up {
-  from{
-    transform: translateY(100px); opacity: 0;
-  }
-  to{
-    transform: translateY(0);opacity:1;
-  }
-  
-}
-@keyframes fadeup {
-  from{
-    transform: translateY(10px) scale(0.5);
-    opacity: 0;
-  }
-  to{
-    transform: translateY(0) scale(1);
-    opacity: 1;
-  }
-}
-
-.carousel{
-  margin:100px auto;
-  width:100%;
-  display:flex; 
-  overflow-x: hidden;
-}
-.carousel::-webkit-scrollbar{
-  display: none;
-}
-.group{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  animation:spin 7s infinite linear;
-  padding-right: 0.5em;
-  
-}
-.group2{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  animation:spin 7s infinite linear;
-  padding-right: 0.5em;
-  
-}
-.cards{
-  flex: 0 0 5em;
-  height:3em;
-  margin-right:0.5em;
-  color:whitesmoke;
-  background-color:transparent;
-  padding: 10px 20px;
-  border-radius: 10px;
-  font-size:2.5em;
-}
-.container-in{
-  width:500px;
-}
-@keyframes spin{
-  from{
-    translate:0%;
-  }
-  to{
-    translate:-50%;
-  }
+.button-cont{
+  margin-top: 250px;
+  margin-bottom: 250px;
 }
